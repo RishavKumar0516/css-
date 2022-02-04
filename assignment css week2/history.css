@@ -1,0 +1,70 @@
+body{
+	margin: 1%;
+	padding: 1%;
+	background: #FFFFFFFF;
+}
+header{
+	display: inline-block;
+	width:100%;
+	height: 28%;
+	color:#FF0000FF;
+	background: #FFFFFFFF;
+	background-image: url("flywheel2.jpg");
+	background-repeat: no-repeat;
+	background-size:100% 100%; 
+	text-align: center;
+	font-style: serif;
+	font-size: 25px;
+	font-family: times;
+}
+nav{
+	padding: 20px;
+}
+nav a{
+	display: inline-block;
+    color:#000000FF;
+    background: #FFFFFF80;
+    padding: 5px;
+    text-align: center;
+    width:20%;
+    height:30px;
+    margin:15px;
+    font-size:20px; 
+    text-decoration: none;
+    border-radius: 15px;
+}
+a:hover{
+background:-moz-linear-gradient(top #21007FFF 0%,#267F00FF 100%);
+background:#007F0E80;
+color:#FF006EFF ;
+}
+a:focus{
+	color: #00FFFFFF;
+}
+.left{
+	width:40%;
+	background: #21007FFF ;
+	padding: 3%;
+	float: left;/*here float left is very important ,in you would not place it then you will not find the paragraph t right top*/
+}
+.left img{
+	display: inline-block;
+	width:80%;
+	height:45%;
+	margin: 10%;
+
+
+}
+h2{
+	color: #000000FF;
+	text-transform: uppercase;
+	font-size:15px; 
+	text-align: left;
+}
+.right{
+width:45%;
+display: inline-block;
+padding-left: 2%;
+position: absolute;/*with using this you can place any thing any where so this is very important*/
+right: 20;
+

@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background:yellow;
+	margin:0 auto;
+}
+.box{
+	display:inline-block;/* this is for creating box */
+	width:30em;
+	text-align: center;
+	height: 9em;
+	line-height: 9em;
+	background:white;
+	padding:5px; 
+	margin:0 auto;
+	margin:10em 0 1em 10em;
+	font-style: italic;
+	font-size: 25px;
+}
+/*--------------let's learn about shadow property--------------*/
+.box{
+	/* box shadow is gonna accept at least 2 or 6 values*/
+	box-shadow: 20px 20px 20px 0px rgba(0,0,0,0.7);
+	/* this values are in form of px,em,rem etc but not in the form of percentage,
+	   percentage won't work */
+	/* first number is the horizental offset*/
+	/* and second number is vertical offset*/
+	/* the third number for blur ,size of blur*/
+	/* the forth number means take 20px and then blur, these means how far we
+	   go before start blur */
+	/*if you haven't put the color then by default it will take the color of element but you are 
+	free to put any color*/
+	/* if you want to move things up or to the left them use negative value */
+
+}
+.box2{
+	display:inline-block;/* this is for creating box */
+	width:30em;
+	text-align: center;
+	height: 9em;
+	line-height: 9em;
+	background:white;
+	padding:5px; 
+	margin:0 auto;
+	margin:10em 10em;
+	font-style: italic;
+	font-size: 25px;
+}
+.box2{
+	/* if you want to move things up or to the left them use negative value */
+	box-shadow: -20px -20px 20px 20px #49B59DFF;
+		/* the forth number means take 20px and then blur, these means how far we
+	   go before start blur */
+}
+.box3{
+	display:inline-block;/* this is for creating box */
+	width:30em;
+	text-align: center;
+	height: 9em;
+	line-height: 9em;
+	background:white;
+	padding:5px; 
+	margin:0 auto;
+	margin:10em 10em;
+	font-style: italic;
+	font-size: 25px;
+}
+.box3{
+	/* if you want to move things up or to the left them use negative value */
+	box-shadow: 0px 0px 20px 20px #3A51C4FF;
+}

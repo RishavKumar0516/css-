@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spanning multiple rows and columns</title>
+    <style>
+        .container{
+          /* adding grid container property*/
+          display:grid;
+          grid-template-columns:repeat(5,1fr);
+          grid-template-rows:repeat(4,1fr);
+          /*grid-column-gap:4rem;
+          grid-row-gap:1rem;*/
+          grid-gap:1rem;
+        }
+        .container .item{
+          border:2px ridge blue;
+          background:rgb(235, 148, 235);
+          color:rgb(14, 14, 14);
+          padding:20px;
+          /* adding grid item property*/
+
+        }
+        .container2{
+          /* adding grid container property*/
+          display:grid;
+          grid-template-columns:repeat(5,1fr);
+          grid-template-rows:repeat(4,1fr);
+          /*grid-column-gap:4rem;
+          grid-row-gap:1rem;*/
+          grid-gap:1rem;
+        }
+        .container2 .item{
+          border:2px ridge blue;
+          background:rgb(235, 148, 235);
+          color:rgb(14, 14, 14);
+          padding:20px;
+          /* adding grid item property*/
+        }
+        /*if we want the first item to take the width up to item 3 and 8 and height up to item 6 and 8 them */
+        .container2 .item:nth-child(1){
+            grid-column-start: 1; 
+                            /*these takes the whole width from grid-line 1 to grid-line number 3*/ 
+            grid-column-end:3;
+
+            grid-row-start:1;
+                            /*these takes the whole height from grid-line 1 to grid-line number 3*/ 
+            grid-row-end:3;
+
+            /*shortcut methods for grid-column-start and grid-column-end is*/
+            grid-column:1/span 3; /*these span 3 box(item)*/
+
+        }
+        .container3{
+          /* adding grid container property*/
+          display:grid;
+          grid-template-columns:repeat(5,1fr);
+          grid-template-rows:repeat(4,1fr);
+          /*grid-column-gap:4rem;
+          grid-row-gap:1rem;*/
+          grid-gap:1rem;
+        }
+        .container3 .item{
+          border:2px ridge blue;
+          background:rgb(235, 148, 235);
+          color:rgb(14, 14, 14);
+          padding:20px;
+          /* adding grid item property*/
+        }
+        /*if we want the first item to take the width up to item 3 and 8 and height up to item 6 and 8 them */
+        .container3 .item:nth-child(1){
+            /*grid-column-start: 1; 
+                            /*these takes the whole width from grid-line 1 to grid-line number 3*/ 
+           /* grid-column-end:3;
+
+            grid-row-start:1;
+                            /*these takes the whole height from grid-line 1 to grid-line number 3*/ 
+           /* grid-row-end:3;
+
+            /*shortcut methods for grid-column-start and grid-column-end is*/
+            grid-column:1/span 3; /*these span 3 box(item) as width*/
+            grid-row:1/span 3; /*these span 3 box(item) as height*/
+
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is grid item-1</div>
+        <div class="item">This is grid item-2</div>
+        <div class="item">This is grid item-3</div>
+        <div class="item">This is grid item-4</div>
+        <div class="item">This is grid item-5</div>
+        <div class="item">This is grid item-6</div>
+        <div class="item">This is grid item-7</div>
+        <div class="item">This is grid item-8</div>
+        <div class="item">This is grid item-9</div>
+    </div>
+    <h3>grid row-start,  grid-row-end, grid-column-start, grid-column-end</h3>
+    <div class="container2">
+        <div class="item">This is grid item-1</div>
+        <div class="item">This is grid item-2</div>
+        <div class="item">This is grid item-3</div>
+        <div class="item">This is grid item-4</div>
+        <div class="item">This is grid item-5</div>
+        <div class="item">This is grid item-6</div>
+        <div class="item">This is grid item-7</div>
+        <div class="item">This is grid item-8</div>
+        <div class="item">This is grid item-9</div>
+    </div>
+    <h3> using shortcut of (grid row-start,  grid-row-end, grid-column-start, grid-column-end)</h3>
+    <div class="container3">
+        <div class="item">This is grid item-1</div>
+        <div class="item">This is grid item-2</div>
+        <div class="item">This is grid item-3</div>
+        <div class="item">This is grid item-4</div>
+        <div class="item">This is grid item-5</div>
+        <div class="item">This is grid item-6</div>
+        <div class="item">This is grid item-7</div>
+        <div class="item">This is grid item-8</div>
+        <div class="item">This is grid item-9</div>
+    </div>
+</body>
+</html>

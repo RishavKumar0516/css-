@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>create zoom animation with image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+
+
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-container {
+            width: 100%;
+            height: 610vh;
+            position: absolute;
+            left: 0;
+        }
+        
+        #image {
+            width: 100%;
+            height: 100vh;
+            animation:zoom 3s linear infinite;
+        }
+        
+        @keyframes zoom{
+        	0%{
+        		transform:scale(1.3);
+        	}
+        	15%{
+        		transform:scale(1);
+        	}
+        	85%{
+        		transform:scale(1);
+        	}
+        	100%{
+        		transform:scale(1.3);
+        	}
+        }
+        
+        .overlay {
+            width: 100%;
+            height: 100vh;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background:black;
+            opacity:.4;
+        }
+        
+        
+        .logo-contain {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 60px 0px 60px;
+
+        }
+       p:first-child{
+        	font-family: 'Londrina Solid', cursive;
+        	font-size:1.8rem;
+        	color:#FFFF00FF;
+        	position:relative;
+        	text-decoration:none;
+        	
+        }
+        p:first-child::after{
+           content:"";
+           width:0%;
+           height:5px;
+           color:red;
+           background:red;
+           position:absolute;
+           bottom:0px;
+           left:0%;
+           border-radius:10px;
+           transition:all 500ms ease;
+           }
+           p:first-child:hover::after{
+           	left:0px;
+           	width:100%;
+           }
+        
+        p:last-child{
+        	font-family: 'EB Garamond', serif;
+        	font-size:1.5rem;
+        	font-weight:2px;
+        	color:#FFFF00FF;
+        }
+    </style>
+</head>
+
+<body onload="slider()">
+    <div class="container">
+        <div class="image-container">
+            <img src="img/forest-931706_1280.jpg" alt="nature" id="image">
+        </div>
+        <div class="overlay">
+            <div class="logo-contain">
+                <p>fundamental tech</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. Duis
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+    	var slideImg= document.getElementById("image");
+    	var images= new Array(
+               "img/sea-2361247_1280.jpg",
+               "img/cabin-1082063_1280.jpg",
+               "img/mountains-615428_1280.jpg",
+               "img/forest-931706_1280.jpg"
+    		);
+    	var len=images.length;
+    	var i=0;
+    	function slider(){
+           if(i > len-1){
+             i=0;
+           }
+           slideImg.src = images[i];
+           i++;
+           setTimeout('slider()',3000);/* after 3 second these will run function again */
+    	}
+    </script>                                                   
+</body>
+
+</html>

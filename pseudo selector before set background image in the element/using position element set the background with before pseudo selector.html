@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>using position element set the background with before selector</title>
+	<style type="text/css" media="screen and (max-width: 1170px)">
+		/* responsive design */
+		.first-container{
+			flex-wrap:nowrap;
+			margin:2px;
+			padding:2px 0px;
+		}
+		.first-container::before{
+			height:100%;
+		}
+	</style>
+	<style type="text/css">
+		.first-container{
+		display:flex;
+			flex-wrap:wrap;
+			justify-content: center;
+			align-items: center;
+			border:10px solid tomato;
+			margin:20px 40px 40px 40px;	
+			padding:20px 100px;
+		}
+		.first-container::before{
+			content:"";
+			background:url(red_parrot_560586.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			width:100%;
+			height:600px;/* if you not set the height property then the image is not visible,because by default height is set to 0 and if the height of image is 0 then how image will visible so ,when using before selector always specify the width and height.*/
+			position:absolute;
+			left:0; 
+			top:0;
+			z-index:-1;
+			opacity:.4;
+
+		}
+
+		.second-container{
+		display:flex;
+			flex-wrap:wrap;
+			justify-content: center;
+			align-items: center;
+			border:15px solid grey;
+			margin:20px 60px 60px 60px;	
+			padding:20px 100px;
+			position:relative;/* when using position relative in parent element */
+		}
+		.second-container::before{
+			content:"";
+			background:url('flywheel.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			width:100%;
+			height:100%;/* if you not set the height property then the image is not visible,because by default height is set to 0 and if the height of image is 0 then how image will visible so ,when using before selector always specify the width and height.*/
+			position:absolute;
+			left:0; 
+			top:0;
+			z-index:-1;
+			opacity:.4;
+
+		}
+		.third-container{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: center;
+			align-items: center;
+			border:5px double tomato;
+			margin:10px;
+			background: url('red_parrot_560586.jpg');/* if you put background image directly in the container and ,if use opacity property then it gonna work in the full width and height of container and all child element of that container become blur*/
+			background-repeat: no-repeat;
+	        background-size: cover;
+	        background-position:center;
+	        opacity:.4;
+
+		}
+		.item{
+			width:300px;
+			height:300px;
+			border:5px solid red;
+			margin:10px;
+			padding:8px;
+		}
+		
+		.box{
+			display: block;
+			width:400px;
+			margin: 0 auto;
+			border:5px solid green;
+			position: relative;
+		}
+		.forth-container{
+			display:flex;
+			flex-wrap:wrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			
+			height:300px;
+			padding:30px 40px;
+			position:relative;
+		}
+		.forth-container::before{    /* but if you use pseudo selector such as before and after then you can easily put the image in the background of any element using position and z-index property and if you want to decrease the brightness of image use opacity property and these gonna work on only background image.it doesn't affect to any element.*/
+
+			content:"";
+			background: url('sky.jpg');
+			background-repeat: no-repeat;
+	        background-size: cover;
+	        background-position:center;
+	        width:100%;
+	        height:600px;
+	        position:absolute;
+	        top:0px;
+	        left:0px;
+	        z-index:-1;
+	        opacity:.4;
+	
+	
+	</style>
+</head>
+<body>
+	<div class="first-container">
+	<h1> if you use before pseudo selector with the parent element whose position is not relative then it gonna work relative to the body and if you set the height and width then it works for body </h1>
+
+	<div class="item">Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy
+text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has
+survived not only ve centurie</div>
+<div class="item">Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy
+text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has
+survived not only ve centurie</div>
+</div>
+
+
+<div class="second-container">
+	<h1> if you use before pseudo selector with the parent element whose position is  relative then it gonna work relative to that parent element and when you set the width and height ,it works for parent element</h1>
+
+	<div class="item">Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy
+text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has
+survived not only ve centurie</div>
+<div class="item">Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy
+text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has
+survived not only ve centurie</div>
+</div>
+
+
+	<h1>if you put background image directly in the container and ,if use opacity property then it gonna work in the full width and height of container and all child element of that container become blur</h1>
+<div class="third-container">
+	<div class="item">Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy
+text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has
+survived not only ve centurie</div>
+<div class="item">Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy
+text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has
+survived not only ve centurie</div>
+<div class="item">Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy
+text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has
+survived not only ve centurie</div>
+</div>
+
+
+<div class="forth-container">
+<h1 class="before">but if you use pseudo selector such as before and after then you can easily put the image in the background of any element using position and z-index property and if you want to decrease the brightness of image use opacity property and these gonna work on only background image.it doesn't affect to any element</h1>
+
+<div class="box">Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy
+text ever since the 1500s, when an unknown printer took a galley
+of type and scrambled it to make a type specimen book. It has
+survived not only ve centurie</div>
+</div>
+</body>
+</html>

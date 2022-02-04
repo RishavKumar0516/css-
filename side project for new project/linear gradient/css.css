@@ -1,0 +1,86 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	width:100%;/* if we use pertcentage in place of viewport height or width, then the background
+	 color gonna cover whole background*/
+	height:100%;
+	background:linear-gradient(45deg, red , blue );/*for the color in vertical you can use tthese
+	                                                 commented code:
+	                                      background:linear-gradient(to right or to left,color,color);
+	                                        ,but i recommend use degree.   */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin:0 auto;
+	text-align:center;
+}
+.container{
+width:100%;
+margin:0 auto;
+}
+.box1{
+width:50%;
+	height:300px;
+	margin-left:22%;
+	margin-top:90px;
+	box-shadow:0 0 15px 15px black;
+	background:linear-gradient(45deg,#F905D2FF , blue );
+}
+.box2{
+width:50%;
+	height:300px;
+	margin-left:22%;
+	margin-top:90px;
+	box-shadow:0 0 15px 15px black;
+		background:linear-gradient(to right, yellow , blue );
+}
+.box3{
+width:50%;
+	height:300px;
+	margin-left:22%;
+	margin-top:90px;
+	box-shadow:0 0 15px 15px black;
+		background:linear-gradient(to left,green ,red );
+}
+:root {
+--gradient:linear-gradient(45deg,#845ec2,#d65db1,#ff6f91,#ff9671,#ffc75f,#f9f871);
+}/* here we are creating a new color qnd we gonna use them in box4 with hover and 
+             transition effect*/
+.box4{
+width:50%;
+	height:300px;
+	margin-left:22%;
+	margin-top:90px;
+	box-shadow:0 0 15px 15px black;
+		background-image:var(--gradient);/* these make awesome , if you simply add color in hover 
+		part and transition in their parent element then hover not gonna work,but here this is working
+		of because we made our  color(--gradient), and increase the size of background image by 300%
+		,so at one time you can see only half or less then half, of the image, which is 
+		background-position left part .and in hover part we use background-position right to see other
+		 half part of image and using transition property these will gonna happen slowly */
+		background-size:300%;
+		background-position: left;
+		transition:background-position 2s;
+		cursor:pointer;
+}
+.box4:hover{
+		background-position: right;
+}
+.box5{
+width:50%;
+	height:300px;
+	margin-left:22%;
+	margin-top:90px;
+	box-shadow:0 0 15px 15px black;
+		background:var(--gradient);
+				transition:background 2s;/* see here we have added transition but these still 
+				not working .if want to use then write the code of box4 */
+		cursor:pointer;
+}
+.box5:hover{
+			background:linear-gradient(45deg, yellow , blue );	
+
+}

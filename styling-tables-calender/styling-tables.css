@@ -1,0 +1,75 @@
+table.call{/* set the table colo,border, nd spacing*/
+	color: #06425c;
+	border-spacing: 0;
+	border: 3px solid black;
+	-webkit-border-radius:25px 25px 0 0;
+	border-radius: 0 0 25px 25px;
+}
+tr:nth-child(odd){/* alternative color between odd nd even*/ 
+	background: #f2f2f2;
+}
+tr:nth-child(even){
+background: #cdbb79;	
+}
+/* to curve the bottom ,we need to curve the row nd the element. nd each element need to curve different corner*/ 
+tr:last-child{
+	-webkit-border-radius:25px 25px 0 0;
+	border-radius: 0 0 25px 25px;
+}
+tr:last-child>td:frist-child{
+	-webkit-border-radius:0 0 0 25px;
+	border-radius: 0 0 0 25px;	
+}
+tr:last-child>td:last-child{
+	-webkit-border-radius:0 0 25px 0;
+	border-radius: 0 0 25px 0;	
+}
+/*format the caption nd use border radius just for some corner*/
+.cal caption{
+text-transform: uppercase;
+background: #666666;
+color:#ffffff;
+font-size: 150%;
+	-webkit-border-radius:25px 25px 0 0;
+	border-radius:25px 25px 0 0;
+}/*formating common heading nd element attributes*/
+.cal th,.cal td{
+	margin: 2px;
+	padding-bottom: 2px;
+}
+th{
+	text-align: center;
+	background: #ffffff;
+}
+.cal td{/*set up the width nd height of each column*/
+width: 75px;
+height: 75px;
+vertical-align: top;
+}
+.holiday{
+	margin: 0;
+	padding: 0;
+	background: #Fe8300;
+}
+.old{
+	padding: 0;
+	margin: 0;
+	background: #FFD800FF;
+	color:rgba(0,0,0,.25);
+
+}
+/*hide the appointment */
+span{
+	display: block;
+	text-align: center;
+	color: #800000;
+	visibility: hidden;
+}
+/*show the appointment when date is clicked */
+td:active>span{
+	visibility: visible;
+}
+
+
+
+

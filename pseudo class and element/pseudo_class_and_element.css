@@ -1,0 +1,39 @@
+th{/*styling all the header*/
+	border-bottom: 9px;
+	background: #1EDAE0FF;
+	line-height: 45px;
+}
+tr th:first-child{/*styling first row frist header*/
+	text-align: left;
+	padding-left: 9px;
+	border-radius: 8px 8px 0 0;
+}
+tr th:nth-child(2){/*styling first row second header*/
+	border-radius: 8px 8px 0 0;
+	padding: 0 8px 0 8px;
+}
+tr th:last-child{/*styling first row last header*/
+		border-radius: 8px 8px 0 0;
+			padding: 0 12px 0 12px;
+}
+td{/*applying style to all the colunm*/
+	line-height: 35px;
+		background: #52A6ACFF;	
+}
+tr td:first-child{/*styling first column*/
+	text-align: left;
+	box-sizing: 
+}
+tr td:nth-child(2){/*styling second column*/
+	text-align: center;
+	padding: 0 5px 0 5px;
+}
+tr td:last-child{/*styling last column*/
+text-align: center;
+}
+tr{/*change the visibility of color in each row*/ 
+	opacity: .7;
+}
+tr:hover{/* change the boldness of color when you put cursor on each row */
+	opacity: .9;
+}

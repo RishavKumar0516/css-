@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid gallery</title>
+   <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+       *{
+           margin:0;
+           padding:0;
+           box-sizing:border-box;
+       }
+       body{
+        background:rgb(40, 5, 80);
+        width:100%;
+       }
+       .container{
+          
+          margin-top:20px;
+           display:grid;
+           grid-gap:7px;
+          /* grid-template-columns:270px 270px 270px 270px;
+           grid-template-rows:200px 200px 200px 200px;*/
+           grid-template-columns: repeat(4, 270px);
+           grid-template-rows: repeat(4, 200px);
+           justify-content:center;
+           
+           
+       }
+       .container .item{
+           background:rgb(71, 10, 141);
+           border-radius:5px;
+           display:flex;
+           flex-direction:column;
+           justify-content:center;
+           position:relative;
+           align-items:center;
+           transition: 1s ease;
+       }
+
+       .container .item:nth-child(1){
+           grid-column:1/span 2;
+           grid-row:1/span 1; 
+       }
+       .container .item:nth-child(2){
+           grid-column:3/span 1;
+           grid-row:1/span 2; 
+       }
+       .container .item:nth-child(3){
+           grid-column:4/span 1;
+           grid-row:1/span 1; 
+       }
+       .container .item:nth-child(4){
+           grid-column:1/span 1;
+           grid-row:2/span 2; 
+       }
+       .container .item:nth-child(5){
+           grid-column:2/span 1;
+           grid-row:2/span 1; 
+       }
+       .container .item:nth-child(6){
+           grid-column:4/span 1;
+           grid-row:2/span 1; 
+       }
+       .container .item:nth-child(7){
+           grid-column:2/span 3;
+           grid-row:3/span 1; 
+       }
+       p{
+           text-align:center;
+           color:#fff;
+           font-size:20px;
+           padding:15px 10px;
+           letter-spacing:1px;
+           font-family: 'IBM Plex Sans', sans-serif;
+       }
+       .item:hover {
+           background:red;
+           filter:brightness(100%);
+       }
+       .item::after{
+            content:"";
+            position:absolute;
+            left:0;
+            bottom:0;
+            border-radius:5px;
+            width:100%;
+            height:0%;
+            background:rgba(255, 255, 255, 0.356);
+            transition:2s ease;  /* to see some awesome effect comment these line of code.*/
+        }
+        .item:hover::after{
+
+            height:100%;
+
+        }
+        .item h1{
+            color:#fff;
+            font-size:60px;
+            text-transform:uppercase;
+            font-weight:900;
+            letter-spacing:1px;
+           font-family: 'Roboto', sans-serif;
+        }
+
+
+
+        /*------------adding responsive ness to the website--------------*/
+
+        @media only screen and (max-width:700px){
+            .container{
+          
+                margin-top:20px;
+                display:grid;
+                grid-gap:7px;
+                grid-template-columns: repeat(1, 270px);
+                grid-template-rows: repeat(1, 200px);
+                justify-content:center;
+           
+           
+            }
+
+            .container .item:nth-child(1){
+           grid-column:1/span 1;
+           grid-row:1/span 1; 
+       }
+       .container .item:nth-child(2){
+           grid-column:1/span 1;
+           grid-row:2/span 1; 
+       }
+       .container .item:nth-child(3){
+           grid-column:1/span 1;
+           grid-row:3/span 1; 
+       }
+       .container .item:nth-child(4){
+           grid-column:1/span 1;
+           grid-row:4/span 1; 
+       }
+       .container .item:nth-child(5){
+           grid-column:1/span 1;
+           grid-row:5/span 1; 
+       }
+       .container .item:nth-child(6){
+           grid-column:1/span 1;
+           grid-row:6/span 1; 
+       }
+       .container .item:nth-child(7){
+           grid-column:1/span 1;
+           grid-row:7/span 1; 
+       }
+
+       .item h1{
+            color:#fff;
+            font-size:20px;
+            text-transform:uppercase;
+            font-weight:500;
+            letter-spacing:1px;
+           font-family: 'Roboto', sans-serif;
+        }
+        img{
+            width:70px;
+            height:70px;
+        }
+        #aero{
+            width:140px;
+            height:70px; 
+        }
+        p{
+           font-size:15px;
+           padding:15px 10px;
+           letter-spacing:1px;
+           font-family: 'IBM Plex Sans', sans-serif;
+       }
+
+        }
+
+       @media only screen and (min-width:700px) and (max-width:900px){
+
+            .container{
+          
+          margin-top:20px;
+          display:grid;
+          grid-gap:7px;
+          grid-template-columns: repeat(4, 160px);
+          grid-template-rows: repeat(4, 110px);
+          justify-content:center;
+     
+     
+      }
+
+       .container .item:nth-child(1){
+           grid-column:1/span 2;
+           grid-row:1/span 1; 
+       }
+       .container .item:nth-child(2){
+           grid-column:3/span 1;
+           grid-row:1/span 2; 
+       }
+       .container .item:nth-child(3){
+           grid-column:4/span 1;
+           grid-row:1/span 1; 
+       }
+       .container .item:nth-child(4){
+           grid-column:1/span 1;
+           grid-row:2/span 2; 
+       }
+       .container .item:nth-child(5){
+           grid-column:2/span 1;
+           grid-row:2/span 1; 
+       }
+       .container .item:nth-child(6){
+           grid-column:4/span 1;
+           grid-row:2/span 1; 
+       }
+       .container .item:nth-child(7){
+           grid-column:2/span 3;
+           grid-row:3/span 1; 
+       }
+ .item h1{
+      color:#fff;
+      font-size:20px;
+      text-transform:uppercase;
+      font-weight:500;
+      letter-spacing:1px;
+     font-family: 'Roboto', sans-serif;
+  }
+  img{
+      width:50px;
+      height:40px;
+  }
+  #aero{
+      width:100px;
+      height:50px; 
+  }
+  p{
+           text-align:center;
+           color:#fff;
+           font-size:12px;
+           padding:10px 10px;
+           letter-spacing:1px;
+           font-family: 'IBM Plex Sans', sans-serif;
+       }
+        }
+
+
+       @media only screen and (min-width:900px) and (max-width:1150px){
+
+            .container{
+          
+          margin-top:20px;
+          display:grid;
+          grid-gap:7px;
+          grid-template-columns: repeat(4, 215px);
+          grid-template-rows: repeat(4, 145px);
+          justify-content:center;
+     
+     
+      }
+
+       .container .item:nth-child(1){
+           grid-column:1/span 2;
+           grid-row:1/span 1; 
+       }
+       .container .item:nth-child(2){
+           grid-column:3/span 1;
+           grid-row:1/span 2; 
+       }
+       .container .item:nth-child(3){
+           grid-column:4/span 1;
+           grid-row:1/span 1; 
+       }
+       .container .item:nth-child(4){
+           grid-column:1/span 1;
+           grid-row:2/span 2; 
+       }
+       .container .item:nth-child(5){
+           grid-column:2/span 1;
+           grid-row:2/span 1; 
+       }
+       .container .item:nth-child(6){
+           grid-column:4/span 1;
+           grid-row:2/span 1; 
+       }
+       .container .item:nth-child(7){
+           grid-column:2/span 3;
+           grid-row:3/span 1; 
+       }
+ .item h1{
+      color:#fff;
+      font-size:30px;
+      text-transform:uppercase;
+      font-weight:500;
+      letter-spacing:1px;
+     font-family: 'Roboto', sans-serif;
+  }
+  img{
+      width:80px;
+      height:80px;
+  }
+  #aero{
+      width:120px;
+      height:60px; 
+  }
+  p{
+ 
+           font-size:15px;
+           padding:14px 10px;
+           letter-spacing:1px;
+           font-family: 'IBM Plex Sans', sans-serif;
+       }
+        }
+          
+       
+   </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="item">
+            <img src="hand.png" width="90px" height="90px" alt="">
+            <p>Wash hands with soap and water after touching animals nad animals products. </p>
+        </div>
+
+        <div class="item">
+            <img src="sneezing.png" width="90px" height="90px"  alt="">
+            <p>When coughing and sneezing cover mouth and nose with flexend elbow or tissue. </p>
+        </div>
+
+        <div class="item">
+            <img id="aero" src="aero.png" width="170px" height="90px"  alt="">
+            <p>Avoid travel if you have a fever and cough. </p>
+        </div>
+
+        <div class="item">
+            <img src="R.png" width="90px" height="90px"  alt="">
+            <p>If you have a fever, cough and difficulty breathing seek medical care early. </p>
+        </div>
+
+        <div class="item">
+            <img src="food.png" width="90px" height="90px"  alt="">
+            <p>Eat only well cooked food</p>
+        </div>
+
+        <div class="item">
+            <img src="R (1).png" width="90px" height="90px"  alt="">
+            <p>Avoid close contact with the animal that are sick. </p>
+        </div>
+
+        <div class="item">
+            <h1>massonary</h1>
+            <p>Layout Using CSS Grid </p>
+        </div>
+
+    </div>
+</body>
+</html>

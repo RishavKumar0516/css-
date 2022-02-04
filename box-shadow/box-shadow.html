@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>box shadow</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+			margin:0;
+			padding:0;
+		}
+		.container{
+			width:100%;
+			display: flex;
+			border:2px solid blue;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items:flex-start;
+		}
+		.box{
+			width:200px;
+			height:250px;
+            background: white;
+            border:2px solid  green;
+            margin:10px;
+            padding:3px;
+            cursor: pointer;
+		}
+		/*box shadow property*/
+		.box{
+			box-shadow:5px 5px 10px 2px pink;
+			/* for multiple shadow */
+			/*box-shadow:5px 5px 10px 2px black,5px 5px 10px 2px tomato,5px 5px 10px 2px yellow;*/
+			/* to apply shadow inside the box use inset value */
+			/*box-shadow:inset 0px 0px 10px 5px black;*/
+		}
+		#multiple-shadow{
+			/* for multiple shadow */
+			box-shadow:5px 5px 10px 2px black,5px 5px 10px 2px tomato,5px 5px 10px 2px yellow;
+		}
+		#shadow-inside-box{
+			/* to apply shadow inside the box use inset value */
+			box-shadow:inset 0px 0px 10px 5px tomato;
+		}
+		#multiple-inside-shadow{
+			box-shadow:inset 0px 0px 10px 5px tomato,inset 0px 0px 10px 5px blue, 0px 0px 10px 5px violet;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="box">box shadow </div>
+	<div class="box">box shadow </div>
+	<div class="box">box shadow </div>
+	<div class="box" id="multiple-shadow">box shadow </div>
+	<div class="box" id="shadow-inside-box">box shadow </div>
+	<div class="box" id="multiple-inside-shadow">box shadow </div>
+</div>
+</body>
+</html>

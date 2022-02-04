@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position sticky basics</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .container{
+            width:100%;
+            padding:25px 50px;
+            
+        }
+        h1{
+            text-align:center;
+            font-weight:900;
+            padding:20px 0px;
+        }
+        p{
+            font-size:20px;
+            font-weight:500;
+            line-height:30px;
+        }
+
+
+        /* An element with position: sticky; is positioned based on the user's scroll position.
+
+       A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks"  in place (like position:fixed).
+
+Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work. */
+
+        /* adding position sticky in the class */
+
+        .this_is_sticky{
+            position:sticky;
+            /*  these works only when the parent element has some scrolling height. it means height of parent element has to be greater then the height of screen. these sticky effect on the elements seen only inside the parent(.container)   */
+
+            /*  if you add the sticky property in more then one element then , first sticky elements goes underneth, when the another sticky elements comes at specified positioned property */
+            top:0;
+            z-index:11111;
+        }
+
+        h2{
+            text-align:left;
+            font-weight:800;
+            padding:25px 0px;
+            background:#fff;
+        }
+
+        .container2{
+            width:100%;
+            padding:25px 50px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="this_is_sticky" style="background:rgb(106, 221, 167);">Loren Ipsum</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+        unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only .It is a long established fact that a reader
+        will be distracted by the readable content of a page when looking at its layout.
+        The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+        of letters, as opposed to using 'Content here, content here', making it look like
+        readable English. Many desktop.
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+        a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+        looked , up one of the more obscure Latin words, consectetur,
+        
+        </p>
+        <h2 class="this_is_sticky" style="background:rgb(172, 92, 172);" >loren dummy text</h2>
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled it to make a type specimen
+            book. It has survived not only .It is a long established fact that a reader
+            will be distracted by the readable content of a page when looking at its layout.
+            The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+            of letters, as opposed to using 'Content here, content here', making it look like
+            readable English. Many desktop.
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+            a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+            looked , up one of the more obscure Latin words, consectetur,
+            
+            </p>
+
+            <h2 class="this_is_sticky" style="background:rgb(101, 178, 209);" >loren classical</h2>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only .It is a long established fact that a reader
+                will be distracted by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like
+                readable English. Many desktop.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                looked , up one of the more obscure Latin words, consectetur,
+                
+            </p>
+            <h2>loren belif</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only .It is a long established fact that a reader
+                will be distracted by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like
+                readable English. Many desktop.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                looked , up one of the more obscure Latin words, consectetur,
+                
+             </p>
+
+            <h2>loren consectetur</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only .It is a long established fact that a reader
+                will be distracted by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like
+                readable English. Many desktop.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                looked , up one of the more obscure Latin words, consectetur,
+                
+             </p>
+    </div>
+
+    <!-- these is second container -->
+
+    <div class="container2" style="background:rgb(124, 114, 124);">
+        <h1 class="this_is_sticky" style="background:rgb(106, 221, 167);">Loren Ipsum</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+        unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only .It is a long established fact that a reader
+        will be distracted by the readable content of a page when looking at its layout.
+        The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+        of letters, as opposed to using 'Content here, content here', making it look like
+        readable English. Many desktop.
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+        a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+        looked , up one of the more obscure Latin words, consectetur,
+        
+        </p>
+        <h2 class="this_is_sticky" style="background:rgb(172, 92, 172);" >loren dummy text</h2>
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled it to make a type specimen
+            book. It has survived not only .It is a long established fact that a reader
+            will be distracted by the readable content of a page when looking at its layout.
+            The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+            of letters, as opposed to using 'Content here, content here', making it look like
+            readable English. Many desktop.
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+            a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+            looked , up one of the more obscure Latin words, consectetur,
+            
+            </p>
+
+            <h2 class="this_is_sticky" style="background:rgb(101, 178, 209);" >loren classical</h2>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only .It is a long established fact that a reader
+                will be distracted by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like
+                readable English. Many desktop.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                looked , up one of the more obscure Latin words, consectetur,
+                
+            </p>
+            <h2>loren belif</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only .It is a long established fact that a reader
+                will be distracted by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like
+                readable English. Many desktop.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                looked , up one of the more obscure Latin words, consectetur,
+                
+             </p>
+
+            <h2>loren consectetur</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only .It is a long established fact that a reader
+                will be distracted by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like
+                readable English. Many desktop.
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                looked , up one of the more obscure Latin words, consectetur,
+                
+             </p>
+    </div>
+</body>
+</html>

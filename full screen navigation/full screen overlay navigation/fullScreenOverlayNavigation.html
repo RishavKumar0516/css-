@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full screen overlay navigation</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- the overlay-->
+    <div id="myNav" class="overlay">
+
+        <!--button to close navigation-->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!--overlay content-->
+
+        <div class="overlay-content">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="#">Service</a>
+            <a href="#">Contacts</a>
+        </div>
+
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
+    <script>
+           /* Open */
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+    </script>
+
+
+</body>
+</html>

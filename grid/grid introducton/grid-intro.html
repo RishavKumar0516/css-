@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid intro</title>
+    <style>
+        .container1{
+            border:2px solid blue;
+            /*adding grid container property*/
+            display:grid;
+             /* these property defines the number of columns and also
+                the width of column*/
+            grid-template-columns:300px 100px 100px;  /*these creates 3 columns 1st 300px
+                                                                 ,2nd 100px and 3rd 100px*/
+
+
+           /* grid-gap:2rem;  /*add the gap between each column and row. */                                                   
+                                
+        }
+        .container1 .item{
+            
+            height:100px;
+            width:100px;
+            background:hotpink;
+            color:#FFF;
+            text-align:center;
+            margin:4px;
+            padding:5px;
+            border:2px solid blue;
+
+            /*adding grid item property*/
+
+        }
+        .container2{
+            border:2px solid blue;
+
+              /*adding grid container property*/
+
+            display:grid;
+           grid-template-columns:300px auto 100px;   /*these creates 3 columns 1st column of  300px ,3rd column of 100px and left-space to the 2nd column which is auto */
+
+           /* grid-template-columns:auto auto auto;   /*these creates 3 columns and divide the entire width in 3 equal parts */
+
+            grid-gap:2rem;  /*add the gap between each column and row. */
+        }
+        .container2 .item{
+            
+            /* height:100px;
+            width:100px;*/
+            background:hotpink;
+            color:#FFF;
+            text-align:center;
+            margin:4px;
+            padding:5px;
+            border:2px solid blue;
+
+            /*adding grid item property*/
+
+        }
+
+        .container3{
+            border:2px solid blue;
+
+              /*adding grid container property*/
+
+            display:grid;
+            grid-template-columns:1fr 4fr 1fr;   /*these divides the width of entire width of container grid in 3 columns one part to 1st column 4part to 2nd column and 1 part to 3rd column */
+        }
+
+        .container3 .item{
+            
+            height:100px;
+            width:100px;
+            background:hotpink;
+            color:#FFF;
+            text-align:center;
+            margin:4px;
+            border:2px solid blue;
+
+            /*adding grid item property*/
+
+        }
+        .container4{
+            border:2px solid green;
+            
+            /* adding grid container property*/
+
+            display:grid;
+
+            grid-template-columns:repeat(10,auto);  /* if we have to create the 10 columns then we donot write the width of every columns we use the value "repeat and write the number of columns we want and give the width"*/
+
+            grid-gap:2rem;  /*add the gap between each column and row. */
+        }
+        .container4 .item{
+            /* height:100px;
+            width:100px;*/
+            background:hotpink;
+            color:#FFF;
+            text-align:center;
+            margin:4px;
+            padding:5px;
+            border:2px solid blue;
+
+            /*adding grid item property*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">   <!--grid container-->
+
+        <!--grid items-->
+
+        <div class="item"> I AM THE ITEM -1</div>  
+        <div class="item"> I AM THE ITEM -2</div>
+        <div class="item"> I AM THE ITEM -3</div>
+        <div class="item"> I AM THE ITEM -4</div>
+        <div class="item"> I AM THE ITEM -5</div>
+        <div class="item"> I AM THE ITEM -6</div>
+        <div class="item"> I AM THE ITEM -7</div>
+        <div class="item"> I AM THE ITEM -8</div>
+        <div class="item"> I AM THE ITEM -9</div>
+    </div>
+
+    <!--grid container 2-->
+    <div class="container2">
+
+           <!--grid items-->
+
+        <div class="item"> this is item-1</div>
+        <div class="item"> this is item-2</div>
+        <div class="item"> this is item-3</div>
+        <div class="item"> this is item-4</div>
+        <div class="item"> this is item-5</div>
+        <div class="item"> this is item-6</div>
+        <div class="item"> this is item-7</div>
+        <div class="item"> this is item-8</div>
+        <div class="item"> this is item-9</div>
+    </div>
+
+    <!--grid container 3-->
+    <div class="container3">
+
+           <!--grid items-->
+
+        <div class="item"> this is item-1</div>
+        <div class="item"> this is item-2</div>
+        <div class="item"> this is item-3</div>
+        <div class="item"> this is item-4</div>
+        <div class="item"> this is item-5</div>
+        <div class="item"> this is item-6</div>
+        <div class="item"> this is item-7</div>
+        <div class="item"> this is item-8</div>
+        <div class="item"> this is item-9</div>
+    </div>
+
+     <!--grid container 4-->
+     <div class="container4">
+
+        <!--grid items-->
+
+     <div class="item"> this is item-1</div>
+     <div class="item"> this is item-2</div>
+     <div class="item"> this is item-3</div>
+     <div class="item"> this is item-4</div>
+     <div class="item"> this is item-5</div>
+     <div class="item"> this is item-6</div>
+     <div class="item"> this is item-7</div>
+     <div class="item"> this is item-8</div>
+     <div class="item"> this is item-9</div>
+     <div class="item"> this is item-1</div>
+     <div class="item"> this is item-2</div>
+     <div class="item"> this is item-3</div>
+     <div class="item"> this is item-4</div>
+     <div class="item"> this is item-5</div>
+     <div class="item"> this is item-6</div>
+     <div class="item"> this is item-7</div>
+     <div class="item"> this is item-8</div>
+     <div class="item"> this is item-9</div>
+     <div class="item"> this is item-8</div>
+     <div class="item"> this is item-9</div>
+ </div>
+</body>
+</html>

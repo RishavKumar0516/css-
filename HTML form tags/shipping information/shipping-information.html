@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shipping informatiom</title>
+</head>
+<body>
+<form>
+	<fieldset>
+		<legend>shipping information</legend>
+		<label for="shippingname"> Name   :</label>
+		<input id="shippingname" type="text" name="shippingname" required><br><br>
+		<label for="shippingzip">Zip code :</label>
+		<input id="shippingzip" type="number" name="shippingzip" pattern="[0-9]{5}" required><br><br>
+		<label id="itemserialno">Item sr no :</label>
+		<input type="number" name="itemserialno" required><br><br>
+		<label for="price">Price :</label>
+		<input id="price" type="number" name="price" required><br><br>
+		<label for="discount">Discount :</label>
+		<input id="discount" type="number" name="discount" required><br><br>
+		
+	</fieldset>
+	
+	<fieldset>
+		<legend>Billing information</legend><br><br>
+		<label for="billingname">Name    :</label>
+		<input id="billingname" type="text" name="billingname" required><br><br>
+        <label for="billingzip">Zip code :</label>
+        <input id="billingzip" type="number" name="billingzip" pattern="[0-9]{5}" required ><br><br>
+	</fieldset>
+	<input type="submit" name="verify" ><br><br>
+     
+     <input id="same" type="checkbox" name="same" onchange="billingFunction()">
+
+	<label for="same">Is the billing information is same?</label><br><br>
+
+	<fieldset>
+		<legend>Bill of user</legend>
+		<label for="username">Name :</label>
+		<input id="username" type="text" name="username"><br><br>
+		<label for="userzip">Zip code :</label>
+		<input id="userzip" type="number" name="userzip"><br><br>
+		<label for="useritemsrno">item sr no :</label>
+		<input id="useritemsrno" type="text" name="useritemsrno"><br><br>
+		<label for="amountpay"> Amount to be paid :</label>
+		<input id="amountpay" type="number" name="amountpay">
+	</fieldset>
+</form>
+<script>
+function billingFunction(){
+	var shippingname=document.getElementByid('shippingname');
+	var shippingzip=document.getElementByid('shippingzip');
+	var billingname=document.getElementByid('billingname');
+	var shippingzip=document.getElementByid('billingzip');
+
+	if(document.getElementByid('same').checked)
+	{
+		billingname.value=shippingname.value;
+		billingzip.value=shippingzip.value;
+		billingname.setAttribute=('required',true);
+		billingzip.setAttribute=('required',true);
+	}
+	else{
+		billingname.value=" ";
+		billingzip.value=" ";
+		billingname.removeAttribute("required");
+		billingzip.removeAttribute("required");
+	}
+}
+</script>
+</body>
+</html>

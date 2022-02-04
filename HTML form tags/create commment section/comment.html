@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>comment section</title>
+	<style type="text/css">
+		.container{
+			width:40%;
+			border:10px double green;
+			height:400px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+Please enter your lovely name : <input id="name" type="text" name="name" required onchange="commentsection()"><br><br>
+please comment here : <input id="comment" type="text" name="comment" minlength="0" maxlength="500" onchange="commentsection()"><br><br>
+<input type="submit" name="submit" onchange="commentsection()">
+
+</div>
+<div id="home">here is your comment</div>
+<script>
+	function commentsection(){
+		var first=document.getElementById('name');
+		var raw=first.value;
+		document.getElementById('home').innerHTML=raw;
+		var second=document.getElementById('comment');
+		var col=second.value;
+		document.getElementById('home').innerHTML=col;
+	}
+</script>
+</body>
+</html>

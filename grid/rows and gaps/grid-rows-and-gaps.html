@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dgrid rows and gaps</title>
+    <style>
+        .grid{
+
+            /*adding grid property*/
+            display:grid;
+            grid-template-rows:1fr 1fr 4fr; /* these creates the height of 1st row to 1fr,height of 2nd row to 1fr and height of 3rd row to 4fr. and the item which are left is set by default to 1fr.*/
+
+            grid-auto-rows:3fr; /*these property applies only to that rows whose height are not determined by grid-template-rows property*/
+            /*grid-template-columns:1fr 4fr 2fr;*/
+            grid-template-columns:repeat(3 ,auto);
+            grid-gap:1rem;
+
+        }
+        .grid .item{
+           background:lightgreen;
+           border:2px ridge blue;
+
+           /*adding grid-item property*/
+        }
+    </style>
+</head>
+<body>
+  <div class="grid">
+      <div class="item">this is items-1</div>
+      <div class="item">this is items-2</div>
+      <div class="item">this is items-3</div>
+      <div class="item">this is items-4</div>
+      <div class="item">this is items-5</div>
+      <div class="item">this is items-6</div>
+      <div class="item">this is items-7</div>
+      <div class="item">this is items-8</div>
+      <div class="item">this is items-9</div>
+      <div class="item">this is items-10</div>
+      <div class="item">this is items-1</div>
+      <div class="item">this is items-2</div>
+      <div class="item">this is items-3</div>
+      <div class="item">this is items-4</div>
+      <div class="item">this is items-5</div>
+      <div class="item">this is items-6</div>
+      <div class="item">this is items-7</div>
+      <div class="item">this is items-8</div>
+      <div class="item">this is items-9</div>
+      <div class="item">this is items-10</div>
+  </div>  
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modern responsive navigation bar</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="navigation">
+
+        <label class="logo">Allen Parker</label>
+        <span class="openbtn" onclick="openNav()">&#9776; </span>
+
+        <div id="mynav" class="navbar">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="icon">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contacts</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <section></section>
+
+    <script>
+
+        let changeStyle = document.getElementById('mynav');
+
+        // function openNav() {
+        //     changeStyle.style.height = " 100% ";
+        // }
+
+        // function closeNav() {
+        //     changeStyle.style.height = " 0% ";
+        // }
+
+        function openNav() {  /* to see some changes uncomment the above code and comment these below code */
+            if(changeStyle.style.height != "100%"){
+                changeStyle.style.height=" 100% ";
+            }
+            else{
+                changeStyle.style.height = "0%";
+            }
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

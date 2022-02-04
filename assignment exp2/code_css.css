@@ -1,0 +1,26 @@
+h1{
+	text-align: center;
+	background: #808080FF;
+	font-size: 125px;
+	color: #7F0037FF;
+}
+nav{
+	text-align: center;
+	background: #FF7FEDFF;
+	font-variant: small-caps;
+	font-family: "times New Roa",serif,aerial;
+	font-size:150%; 
+}
+h2{
+	color:#FF6A00FF ;
+	background:#0094FF80 ;
+}
+details{
+   font-family: italic;
+}
+summary{
+	font-family: normal;
+}
+footer{/*header and footer always same background color*/
+	background: #808080FF;	
+}

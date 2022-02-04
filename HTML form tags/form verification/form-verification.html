@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form verfication</title>
+</head>
+<body>
+<form action="http://fundamental05tech.github.git" method="GET">
+	<fieldset>
+	<legend>form verification</legend>
+	<label for="fname">First name: </label>
+	<input id="fname" type="text" name="fname" id="fname" required><br><br>
+	<label for="lname">Last name:  </label>
+	<input id="lname" type="text" name="lname" required><br><br>
+	<label for="yesnick">Nick name:  </label>
+	<input id="yesnick" type="checkbox" name="yesnick" value="yes" onchange="nicknameFunction()"><br><br>
+	<div id="nick">
+		<label for="nickname">Nickname:  </label>
+		<input id="nickname" type="text" name="nickname"><br><br>
+	</div>
+    <input type="submit" name="verify">
+	</fieldset>
+</form>
+<script>
+     function nicknameFunction(){
+	if(document.getElementById('yesnick').checked){
+		document.getElementById('nick').style.display="inline";
+		document.getElementByid('nickname').setAttribute('required',true);
+	}
+	else{
+		document.getElementById('nickname').removeAttribute('required');
+		document.getElementById('nick').style.display="none";
+	}
+}	
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>comparing two input</title>
+	<style type="text/css">
+		form{
+			border:10px double tomato;
+		}
+		input,label{
+			margin:10px;
+			padding:5px;
+			color:blue;
+			
+		}
+	</style>
+</head>
+<body>
+<form>
+	<div>
+	<label>preffered email address : <input id="first" type="email" name="email-address" placeholder="me@.com" required></label><br><br>
+	<label>repeat your email : <input id="second" type="email" name="repeat-email" placeholder="me@.com" required onchange="check()"></label><br><br>
+	<input type="submit" name="submit" value="confirm emails!" onclick="return check()">
+</div>
+
+</form>
+<script>
+	function check(){
+		var email1=document.getElementById('first');
+		var email2=document.getElementById('second');
+		if(email1.value!=email2.value){
+			alert("The two email doesn't matches!");
+			//document.getElementById('first').innerHTML=" ";
+	        //document.getElementById('second').innerHTML=" ";
+	        email1.value=" ";   // these will erase the content of the 2 email input element.
+
+	        email2.value=" ";/*here variables email1 and email2 pointing to the input element  whose id is first  and second ,so if i have to change the attribute of those element we can do these by the syntax 
+                      variable name.attribute name="value"   */ 
+	        return false;
+		}
+		
+	}
+</script>
+</body>
+</html>

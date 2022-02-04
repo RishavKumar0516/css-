@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text shadow</title>
+	<style type="text/css">
+		.container{
+			display:flex;
+			width:100%;
+			height:100%;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			border:10px solid green;
+		}
+		.text-shadow{
+			width:800px;
+			height:100px;
+			line-height: 100px;
+			margin:10px;
+			border:3px solid violet;
+			text-align: center;
+			font-size:50px;
+			letter-spacing: 2px;
+		}
+		/*text shadow property */
+		#shade0{
+			text-shadow:2px 2px ;/*using offset-x and offset-y property */
+			
+		}
+		#shade1{
+         text-shadow:2px 2px 5px; /* using offset-x ,offset-y,and blur-radius property */
+		}
+		#shade2{
+         text-shadow:2px 2px 5px red;/*  using offset-x ,offset-y,and blur-radius ,color  property */
+		}
+		#shade3{
+			color:white;
+         text-shadow:2px 2px 25px red;/*  using offset-x ,offset-y,and blur-radius ,color  property */
+		}
+		#shade4{
+			color:white;
+         text-shadow:2px 2px 5px black;/*  using offset-x ,offset-y,and blur-radius ,color  property */
+		}
+		#shade5{
+			color:white;
+         text-shadow:2px 2px 5px #ff0000;/*  using offset-x ,offset-y,and blur-radius ,color  property */
+		}
+		#shade6{
+			color:black;
+         text-shadow:2px 2px 5px #ff0000,2px 2px 5px #0000ff;/*  multiple shadow */
+		}
+		#shade7{
+			color:white;
+         text-shadow:1px 1px 2px black,0px 0px 25px blue,0px 0px 5px darkblue;/*  multiple shadow */
+		}
+		#shade8{
+			color:yellow;
+         text-shadow:-1px 0px  black,0px 1px  black,1px 0px  black,0px -1px  black;/* plain border around simple text */
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+	<h1 class="text-shadow">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade0">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade1">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade2">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade3">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade4">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade5">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade6">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade7">welcome rishav kumar</h1>
+	<h1 class="text-shadow" id="shade8">welcome rishav kumar</h1>
+
+</div>
+</body>
+</html>

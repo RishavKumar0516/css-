@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.navbar{
+    width:100%;
+    height:100px;
+    background:rgb(37, 74, 109);
+    background:rgb(37, 74, 112);
+    position:relative;
+    line-height:100px;
+}
+
+
+.icon{
+    width:73%;
+    float:right;
+    text-align:center;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    
+    
+}
+.icon a{
+    padding:0px 10px;
+    font-size:20px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#818181;
+    text-decoration:none;
+  
+}
+.icon a:hover, .icon a:focus{
+    color:#f2f2f2;
+}
+
+.closebtn{
+
+  position:absolute;
+  top:30px;
+  right:45px;
+  font-size:60px;
+  color:#818181;
+  text-decoration:none;
+  display:none;
+}
+
+.closebtn:hover{
+  color:#f2f2f2;
+}
+
+/* .box{
+    
+  width:100%;
+  height:100px;
+  background:darkcyan;
+  display:none;
+ 
+} */
+
+.name{
+  position:absolute;
+  top:30px;
+    left:30px;
+    display:inline-block;
+    padding: 0 10px;
+    font-size:30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* margin-right:20px; */
+    
+}
+
+.openbtn{ 
+  position:absolute;
+  top:30px;
+  right:45px;
+  font-size:50px;
+  font-weight:500;
+  color:#1c4aad;
+  text-decoration:none;
+  display:none;
+}
+
+
+
+/*  adding responsiveness using media query  */
+
+@media only screen and (max-width:700px){
+
+   .navbar{
+       width:100%;
+       height:0%;
+       display:block;
+       position:fixed;
+       z-index:1;
+       top:0;
+       left:0;
+       overflow-y:hidden; 
+       background:rgb(37, 74, 109);
+       background:rgb(37, 74, 112);
+       transition:0.5s;
+   }
+
+
+   .icon{
+       width:100%;
+       clear:both;
+       position:relative;
+       top:25%;
+       text-align:center;
+       display:block;
+   }
+
+   .icon a{
+    padding:8px 10px;
+    font-size:36px;
+    color:#818181;
+    text-decoration:none;
+    display:block;
+    transition:0.3s;
+   }
+
+   .icon a:hover, .icon a:focus{
+     color:#f1f1f1;
+   }
+
+   .closebtn{
+    position:absolute;
+    display:block;
+    top:30px;
+    right:45px;
+    font-size:60px;
+    color:#818181;
+    text-decoration:none;
+  }
+  
+  .closebtn:hover{
+    color:#f2f2f2;
+  }
+
+  /* .box{
+    position:absolute;
+    top:0;
+    left:0;
+    left:0;
+    display:block;
+    width:100%;
+    height:100px;
+    background:darkcyan;
+  } */
+
+  .name{
+    position:absolute;
+    top:30px;
+    left:30px;
+      display:inline-block;
+      padding: 0 10px;
+      font-size:30px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      /* margin-right:20px; */
+      
+  }
+  
+  .openbtn{ 
+    position:absolute;
+    display:block;
+    top:20px;
+    right:45px;
+    font-size:50px;
+    font-weight:500;
+    color:#1c4aad;
+    text-decoration:none;
+  }
+
+}
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+

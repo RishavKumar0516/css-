@@ -1,0 +1,71 @@
+.container{
+	display: flex;
+	background: rgba(234,234,2,1);
+}
+.box{
+	background: red;
+	width:250px;
+	height:250px;
+		justify-content: center;
+	align-items:center;
+	position:relative;
+	animation-name:resizer;
+	animation-duration:2s;
+	/*animation-iteration-count:3;*/
+	animation-iteration-count: infinite;
+	animation-fill-mode: alternate;
+	animation-timing-function: ease-in;
+	animation-direction:reverse;
+}
+p{
+	text-align:center;
+	margin:120px auto;
+
+	align-content: center;
+}
+@keyframes resizer{
+	from{
+width:200px;
+	}
+	to{
+width:800px;
+	}
+}
+.container2{
+	display:flex;
+	background: rgba(44,44,123,1);
+}
+.box2{
+background:tomato;
+width:250px;
+height:250px;
+position:relative;
+animation-name:rotate;
+animation-duration:6s;
+animation-delay: 2s;
+animation-iteration-count: 4;
+
+
+}
+@keyframes rotate{
+	0%{
+		top:0;
+		left:0;
+	}
+	25%{
+		top:250px;
+		left:0px;
+	}
+	50%{
+		top:250px;
+		left:250px;
+	}
+	75%{
+		top:0px;
+		left:250px;
+	}
+	100%{
+		top:0px;
+		left:0px;
+	}
+}

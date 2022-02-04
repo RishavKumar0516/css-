@@ -1,0 +1,22 @@
+.img-sec{
+	height:20%;
+	position:relative;
+	overflow:hidden;
+	box-shadow:5px 5px 5px 5px #000;
+	border-radius:5px;
+	justify-content: center;/*this align everything at center in horizental direction*/
+align-items: center;/*this align everything at center in vertical direction*/
+margin-bottom: 40px;
+}
+
+.gallery{
+	position: relative;
+	overflow: hidden;
+}
+.gallery img{
+	width:100%;
+transition: .4s;
+}
+.img-sec:hover .gallery img{
+transform:scale(1.5,1.5);
+}

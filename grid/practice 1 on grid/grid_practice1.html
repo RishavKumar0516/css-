@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice on grid</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        h2{
+            display:block;
+            width:100%;
+            height:100px;
+            line-height:100px;
+            background-color:chartreuse;
+            text-align:center;
+            margin-bottom:5px;
+        }
+
+        /*   for container 1*/
+        .container1{
+            width:98%;
+            margin-left:6px;
+            border:5px ridge #86e759;
+            display:grid;
+            grid-template-columns:auto auto auto;
+            grid-template-rows:120px 200px 300px;
+            grid-gap:10px 5px;
+            /*justify-content:center;*/
+           /* justify-content:space-evenly;*/
+            
+            
+        }
+        .container1 .items{
+            background:hotpink;
+            color:#FFF;
+            text-align:center;
+            margin:4px;
+            padding:5px;
+            border:2px solid blue;
+        }
+
+        /*-------------- for container 2--------------*/
+
+        .container2{
+            width:98%;
+            margin-left:6px;
+            margin-top:50px;
+            border:5px ridge #86e759;
+            display:grid;
+            grid-template-columns:auto auto auto auto auto;
+            grid-template-rows:repeat(18,70px);
+           
+            grid-gap:10px 5px;
+            
+        }
+
+        .container2 .items{
+            background:hotpink;
+            color:#FFF;
+            text-align:center;
+            margin:4px;
+            padding:5px;
+            border:2px solid blue;
+        }
+        .container2 .items:nth-child(1){
+            grid-column-start:1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        .container2 .items:nth-child(2){
+            grid-column-start:3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 6;
+        }
+        .container2 .items:nth-child(3){
+            grid-column-start:4;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+        .container2 .items:nth-child(4){
+            grid-column:1/span 1;
+            grid-row:4/span 4;
+        }
+        .container2 .items:nth-child(5){
+            grid-column:2/span 1;
+            grid-row:4/span 4;
+        }
+        .container2 .items:nth-child(6){
+            grid-column:3/span 1;
+            grid-row:6/span 3;
+        }
+        .container2 .items:nth-child(7){
+            grid-column:4/span 1;
+            grid-row:5/span 4;
+        }
+        .container2 .items:nth-child(8){
+            grid-column:5/span 1;
+            grid-row:5/span 5;
+        }
+        .container2 .items:nth-child(9){
+            grid-column:1/span 2;
+            grid-row:8/span 3;
+        }
+        .container2 .items:nth-child(10){
+            grid-column:3/span 2;
+            grid-row:9/span 4;
+        }
+        .container2 .items:nth-child(11){
+            grid-column:5/span 1;
+            grid-row:10/span 3;
+        }
+        .container2 .items:nth-child(12){
+            grid-column:1/span 1;
+            grid-row:11/span 3;
+        }
+        .container2 .items:nth-child(13){
+            grid-column:2/span 1;
+            grid-row:11/span 4;
+        }
+        .container2 .items:nth-child(14){
+            grid-column:3/span 1;
+            grid-row:13/span 5;
+        }
+        .container2 .items:nth-child(15){
+            grid-column:4/span 2;
+            grid-row:13/span 3;
+        }
+        .container2 .items:nth-child(16){
+            grid-column:1/span 1;
+            grid-row:14/span 4;
+        }
+        .container2 .items:nth-child(17){
+            grid-column:2/span 1;
+            grid-row:15/span 3;
+        }
+        .container2 .items:nth-child(18){
+            grid-column:4/span 2;
+            grid-row:16/span 2;
+        }
+
+        /* playing with container 3 */
+
+        .container3{
+            width:98%;
+            margin-left:6px;
+            margin-top:50px;
+            border:5px ridge #86e759;
+            display:grid;
+            grid-gap:3px;
+            /*grid-template-areas:
+            'on on on on on'
+            
+            'to to to thr thr'
+            'fo fo fi fi fi'
+            'si si si se se'
+            'ei ni ni ni ni'
+            'te te te te te'
+            ;*/
+
+            grid-template-areas:
+            'on on on on on on on on on'
+            'to to th th th th fo fo fi'
+            'si si si se se ei ei ni ni'
+            'te te te te te te te te te';
+            
+
+        }
+        .container3 .items{
+            background:hotpink;
+            color:#FFF;
+            text-align:center;
+            margin:4px;
+            padding:34px;
+            border:2px solid blue;
+        }
+        .container3 .items:nth-child(1){
+            grid-area:on;
+        }
+        .container3 .items:nth-child(2){
+            grid-area:to;
+        }
+        .container3 .items:nth-child(3){
+            grid-area:th;
+        }
+        .container3 .items:nth-child(4){
+            grid-area:fo;
+        }
+        .container3 .items:nth-child(5){
+            grid-area:fi;
+        }
+        .container3 .items:nth-child(6){
+            grid-area:si;
+        }
+        .container3 .items:nth-child(7){
+            grid-area:se;
+        }
+        .container3 .items:nth-child(8){
+            grid-area:ei;
+        }
+        .container3 .items:nth-child(9){
+            grid-area:ni;
+        }
+        .container3 .items:nth-child(10){
+            grid-area:te;
+        }
+    </style>
+</head>
+<body>
+    <h2>These is container</h2>
+    <div class="container1">
+        
+        <div class="items">These is a item - 1</div>
+        <div class="items">These is a item - 2</div>
+        <div class="items">These is a item - 3</div>
+        <div class="items">These is a item - 4</div>
+        <div class="items">These is a item - 5</div>
+        <div class="items">These is a item - 6</div>
+        <div class="items">These is a item - 7</div>
+        <div class="items">These is a item - 8</div>
+        <div class="items">These is a item - 9</div>
+        <div class="items">These is a item - 10</div>
+    </div>
+      <h2>Container 2</h2>
+    <div class="container2">
+        <div class="items">These is a item -1</div>
+        <div class="items">These is a item -2</div>
+        <div class="items">These is a item -3</div>
+        <div class="items">These is a item -4</div>
+        <div class="items">These is a item -5</div>
+        <div class="items">These is a item -6</div>
+        <div class="items">These is a item -7</div>
+        <div class="items">These is a item -8</div>
+        <div class="items">These is a item -9</div>
+        <div class="items">These is a item -10</div>
+        <div class="items">These is a item -11</div>
+        <div class="items">These is a item -12</div>
+        <div class="items">These is a item -13</div>
+        <div class="items">These is a item -14</div>
+        <div class="items">These is a item -15</div>
+        <div class="items">These is a item -16</div>
+        <div class="items">These is a item -17</div>
+        <div class="items">These is a item -18</div>
+    </div>
+
+    <div class="container3">
+        <div class="items">These is a container - 1</div>
+        <div class="items">These is a container - 2</div>
+        <div class="items">These is a container - 3</div>
+        <div class="items">These is a container - 4</div>
+        <div class="items">These is a container - 5</div>
+        <div class="items">These is a container - 6</div>
+        <div class="items">These is a container - 7</div>
+        <div class="items">These is a container - 8</div>
+        <div class="items">These is a container - 9</div>
+        <div class="items">These is a container - 10</div>
+
+        <!--<div class="items">These is a container - 11</div>
+        <div class="items">These is a container - 12</div>
+        <div class="items">These is a container - 13</div>
+        <div class="items">These is a container - 14</div>
+        <div class="items">These is a container - 15</div>
+        <div class="items">These is a container - 16</div>
+        <div class="items">These is a container - 17</div>
+        <div class="items">These is a container - 18</div>
+        <div class="items">These is a container - 19</div>
+        <div class="items">These is a container - 20</div>-->
+    </div>
+</body>
+</html>

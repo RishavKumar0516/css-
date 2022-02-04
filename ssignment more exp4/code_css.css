@@ -1,0 +1,45 @@
+body{
+	background:#808080FF;
+	font-size:150%; 
+	margin: 4%;
+}
+h1{
+	text-align: center;
+	background: #0094FFFF;
+	font-size: 100px;
+	color: #FFFFFFFF;
+}
+nav{
+	text-align: center;
+	background: #0094FFFF;
+	font-variant: small-caps;
+	font-family: "times New Roa",serif,aerial;
+	font-size:150%;
+	padding-bottom:26px; 
+	clear: both;
+}
+h2{
+	color:#FF6A00FF ;
+	background: #0094FFFF;
+}
+details{
+   font-family: italic;
+   clear: both;
+}
+summary{
+	font-family: normal;
+	clear: both;
+}
+footer{/*header and footer always same background color*/
+	background: #0094FFFF;
+		clear: both;	
+}
+section{
+	width:30%;
+	display: inline-block;
+	float: left;
+	margin-right:3%; 
+}
+img{
+	width:75px;
+}

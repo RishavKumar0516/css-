@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>creating stylish image using overflow hidden</title>
+<style>
+    *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+    }
+    .container{
+
+        width:95%;
+        height:100vh;
+        margin:30px;
+        border:10px solid black;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+    }
+    .gallery{
+        width:600px;
+        height:400px;
+        position:relative;
+        overflow:hidden;
+        border:5px solid tomato;
+    }
+    .image-container{
+        width:600px;
+        height:400px;
+        position:relative;
+        
+    }
+    #images{
+        width:600px;
+        height:400px;
+        transition: .4s;
+       
+    }
+    .gallery:hover #images{
+        transform:scale(1.5);
+    }
+    .content-area{
+        width:100%;
+        height:70px;
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        overflow:hidden;
+        text-align:center;
+        background:rgb(107, 154, 160);
+        transition:all .4s;
+        
+
+    }
+    .gallery:hover .content-area{
+        height:120px;
+    }
+    .content-box{
+        transition:.4s;
+    }
+    #heading{
+        color:rgb(243, 17, 243);
+        text-transform:uppercase;
+        font-style:sans-serif;
+        font-size:24px;
+        padding:8px 6px;
+        
+    }
+    .content{
+padding:3px 6px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="gallery">
+       
+           <img src="img/sea-2361247_1280.jpg" alt="mountain" id="images">
+       
+       <div class="content-area">
+           <h2 id="heading">lovely tortoise in the ocean</h2>
+           <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley
+            of type and scrambled it to make a type specimen book.</p>
+       </div>
+    </div>
+</div>
+</body>
+</html>

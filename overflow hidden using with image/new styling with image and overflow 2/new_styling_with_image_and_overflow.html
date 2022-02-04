@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>new styling with image and overflow</title>
+<style>
+    .container{
+        width:98%;
+        height:500px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        border:3px solid black;
+
+    }
+    .gallery{
+        width:350px;
+        height:450px;
+        border:4px double greenyellow;
+        position:relative;
+        overflow:hidden;
+
+    }
+    .img-container{
+       width:350px;
+       height:450px;
+       transition: all;
+       transition-duration:2s;
+       transition-timing-function: ease-in-out;
+    }
+    .gallery:hover .img-container{
+        transform:scale(1.5);
+    }
+    .content{
+        width:350px;
+        height:auto;
+        text-align:center;
+        background:#5393fa5b;
+        position:absolute;
+        right:0%;
+        top:40%;
+        
+    }
+    .background::after{
+        content:"";
+        width:350px;
+        height:450px;
+        position:absolute;
+        left:0px;
+        top:0px;
+        background:rgb(0, 204, 255);
+        opacity:.3;
+       
+    }
+</style>
+
+</head>
+<body>
+<div class="container">
+    <div class="gallery">
+        <img src="img/r3.jpg" alt="" class="img-container">
+        <p class="background"></p>
+        <div class="content">
+            <h2>welcome to our home</h2>
+            <p class="child">Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

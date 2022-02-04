@@ -1,0 +1,69 @@
+.overlay{
+    width:0%;
+    height:100%;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    overflow-x:hidden;
+    background:rgb(49, 66, 71);
+    background:rgb(49, 66, 81);
+    transition:0.5s ease;
+    
+    /* to comment use " shift + alt + a " */
+    /* to comment already typed paragraph  use " ctrl + k " */
+}
+
+.overlay-content{
+    position:relative;
+    top:25%;
+    width:100%;
+    text-align: center;
+    
+}
+
+.overlay-content a {
+     display:block;
+     text-decoration:none;
+     padding:10px;
+     font-size:36px;
+     color:#818181;
+     transition:0.3s;
+}
+
+.overlay-content a:hover, .overlay-content a:focus{
+    color:#f2f2f2;
+}
+
+.overlay .closebtn{
+
+    position:absolute;
+    top:30px;
+    right:45px;
+    font-size:60px;
+    color:#818181;
+    text-decoration:none;
+}
+
+.overlay .closebtn:hover{
+    color:#f2f2f2;
+}
+
+ span{ 
+    position:absolute;
+    top:30px;
+    right:45px;
+    font-size:50px;
+    font-weight:500;
+    color:#1c4aad;
+    text-decoration:none;
+}
+@media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }

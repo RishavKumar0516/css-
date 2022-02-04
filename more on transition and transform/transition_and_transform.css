@@ -1,0 +1,40 @@
+div{
+	display: inline-block;
+	width:90%;
+}
+img{
+	display: block;
+	width:45%;
+	display: flex;
+	margin: 0 auto;
+margin:9%;
+transition-property: color,width,border-radius,transform;
+transition-duration: 5s;
+transition-timing-function: 2s ease;
+transition-delay: .5s;
+
+}
+img:first-child:hover{
+width:60%;
+  animation: flip; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+img:last-child:hover{
+	transform: translate(90px,90px);
+}
+img:nth-child(2):hover{
+transform: rotate(360deg);
+}
+img:nth-child(4):hover{
+transform:scale(1.5,1.5);
+}
+img:nth-child(3):hover{
+transform:skew(30deg,30deg);
+}
+img:nth-child(5):hover{
+	transform:rotateY(360deg);
+	transform:rotateX(360deg);
+}
+img:nth-child(6):hover{
+transform: rotate3d(360deg);	
+}

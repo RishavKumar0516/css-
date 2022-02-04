@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid autofit and minmax</title>
+    <style>
+        .container{
+            /*adding the grid container property*/
+            display:grid;
+            grid-gap:1rem;
+
+           /* grid-template-columns:repeat(3,112px);*/
+            grid-template-columns:repeat(3,112px);
+            justify-content:center;
+            align-items:center;
+
+        }
+        .container .box{
+          /*grid item property*/
+          background:mediumblue;
+          color:#fff;
+          border:2px ridge orange;
+          padding:34px;
+        }
+
+
+        .container2 {
+            /*adding the grid container property*/
+            display:grid;
+            grid-gap:1rem;
+
+           /* grid-template-columns:repeat(3,112px);
+            grid-template-columns:repeat(3,1fr);*/
+
+            /*here using auto-fit and min max value to create responsive design*/
+            grid-template-columns:repeat(auto-fit,minmax(400px,400px));
+
+            /* these set the minimum width to 300px and maximum width to 1fr when resizing the window  */
+
+        }
+        .container2 .box{
+          /*grid item property*/
+          background:mediumblue;
+          color:#fff;
+          border:2px ridge orange;
+          padding:34px;
+        }          
+    </style>
+</head>
+<body>
+    <h3>these is not responsive</h3>
+    <div class="container">
+        <div class="box"> Item-1</div>
+        <div class="box"> Item-2</div>
+        <div class="box"> Item-3</div>
+        <div class="box"> Item-4</div>
+        <div class="box"> Item-5</div>
+        <div class="box"> Item-6</div>
+        <div class="box"> Item-7</div>
+        <div class="box"> Item-8</div>
+        <div class="box"> Item-9</div>
+    </div>
+
+    <h3> here using auto-fit and min max value to create responsive design</h3>
+
+    <div class="container2">
+        <div class="box"> Item-1</div>
+        <div class="box"> Item-2</div>
+        <div class="box"> Item-3</div>
+        <div class="box"> Item-4</div>
+        <div class="box"> Item-5</div>
+        <div class="box"> Item-6</div>
+        <div class="box"> Item-7</div>
+        <div class="box"> Item-8</div>
+        <div class="box"> Item-9</div>
+    </div>
+</body>
+</html>

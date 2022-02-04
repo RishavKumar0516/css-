@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>position pseudo element</title>
+	<style type="text/css">
+		.static{
+			position:static;
+			border:5px double blue;
+			font-size:30px;
+			font-style: italic;
+
+			/*yoou can see here the top , left , bottom and right property does not affect the position static. */
+			top:100px;
+			left:50px; 
+
+		}
+		/* position:relative;*/
+
+		.single-relative{
+			border:5px double tomato;
+			width:350px;
+			height:350px;
+			font-size:25px;
+			font-style: italic;
+			padding:5px;
+			margin:10px;
+			position:relative;
+			top:40px;
+			left:300px;
+		}
+
+		.container{
+			border:5px ridge pink;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: space-between;
+			align-content: center;
+			position:relative;
+			/*top:20px;*/
+
+
+		}
+		.relative{
+			border:5px double tomato;
+			width:350px;
+			height:350px;
+			font-size:25px;
+			font-style: italic;
+			padding:5px;
+			margin:10px;
+
+		}
+		#box1{
+
+			/* adding position relative to box1 */
+			position:relative;/* but you can see there is not any change in box1, it is not going to change it's place.
+			                     but when we add top ,bottom ,left and right property,it gonna change it's place.*/
+		}
+
+	/*	when we add top ,bottom ,left and right property,it gonna change it's place.*/
+
+		#box2{
+			position:relative; 
+			/* for each and every element the left uppper corner is knows as origin of element .*/ 
+			top:60px;/* what these gonna do is moves the element 60px down from the origin of same element or moves the element 60px below from the actual position or origin of same element . */
+
+			 left:30px;   /*moves the element 60px down from the origin of same element or moves the element 60px below from the actual position or origin of same element . */
+		}
+
+		/*  position:absolute  */
+
+		.parent{
+          width:100%;
+          height:300px;
+          border:5px solid green;
+          position:relative;
+		}
+		.child{
+          width:40%;
+          height:150px;
+          border: 5px solid purple;
+          position:absolute;
+          top:90px;
+          left:350px;
+		}
+		.son{
+			width:500px;
+			height:400px;
+			border:5px double red;
+			font-style:bold;
+			font-size:50px;
+			position:absolute;
+			/*top:1700px;
+			right:200px;*/
+			left:0;
+		}
+
+		.son2{
+			width:500px;
+			height:400px;
+			border:5px double red;
+			font-style:bold;
+			font-size:50px;
+			position:absolute;
+			left:600px;
+			
+		}
+
+		/* position:fixed; */
+
+		.fixed{
+			width:100%;
+			height:100px;
+			border:10px double blue;
+			position:fixed;
+			bottom:0px;
+
+		}
+		
+
+	</style>
+</head>
+<body>
+	<h1>position:static</h1>
+	<div class="static">
+		html element are positioned static by default . static position element are not affected by top,bottom,left and right property. 
+	</div>
+	<hr>
+
+	<!--  position: relative  -->
+	<h1>position:relative</h1>
+	<div class="single-relative"> an element with position: relative; is positioned relative to its normal condition. element are adjusted away from it's normal position . other element will not be adjusted to fit into any gap left by the element. only using position relative do not affect the element. the element is gonna affected by top ,bottom ,left and right property.  </div><hr>
+
+    <h1>position:relative used in both parent(container is parent of child class relative) and child div</h1>
+    <div class="container" id="box1">
+    	<div class="relative"> an element with position: relative; is positioned relative to its normal condition. element are adjusted away from it's normal position . other element will not be adjusted to fit into any gap left by the element. only using position relative do not affect the element. the element is gonna affected by top ,bottom ,left and right property.  </div>
+
+    	<div class="relative" id="box2">  top:60px; what these gonna do is moves the element 60px down from the origin of same element or moves the element 60px below from the actual position or origin of same element .  </div>
+
+    	<div class="relative" id="box3">for each and every element the left uppper corner is knows as origin of element . <br> if you simply add position:relative; in any element ,you will see no any changes in it's position .<br>because it only change the position when  it is affected by top ,bottom ,left and right property.</div>
+    </div>
+    <hr>
+
+    <!--position:absolute;-->
+
+    <h1> using position:absolute; when child element is inside parent element</h1>
+    <div class="parent"> <!--parent element-->
+    	<h3>this works when parent element is positioned position:relative .and child element is position:absolute; .if you do not set position relative in parent element then child element consider document body as his parent. and move according to the body so ,before using position: absolute; in child element make your parent position relative then only child element move according to parent.</h3>
+
+    	<div class="child"> an element with position: absolute; is positioned relative to the positioned parent element .<br> <br> a positioned element is the element one whose position is anything except static .<br> here class parent is parent of class child.</div>    <!--child element-->
+    </div><hr>
+
+    <h1>position:absolute; with no any positioned parent element</h1>
+   
+    <div class="son"> if positoned absolute element has no positioned parent ,then it uses the document body as a parent and moves along with the page </div>
+
+     <div class="son2"> if positoned absolute element has no positioned parent ,then it uses the document body as a parent and moves along with the page </div>
+
+
+    <!--position:fixed -->
+    <h1>position:fixed</h1>
+    <div class="fixed"> an element with position:fixed; is position relative to the view port ,which means it always stays in the same place ,even if the page is scrolled </div>
+</body>
+</html>
